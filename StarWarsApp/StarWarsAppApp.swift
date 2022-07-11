@@ -11,7 +11,7 @@ import SwiftUI
 struct StarWarsAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView(vm: MainScreenViewModel())
+            MainScreenView(vm: MainScreenViewModel(movieManager: MovieManager(networkManager: NetworkManager())))
         }
     }
 }

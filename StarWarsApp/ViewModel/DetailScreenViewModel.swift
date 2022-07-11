@@ -7,6 +7,8 @@
 
 import Foundation
 
-class DetailScreenViewModel: ViewModelProtocol {
+protocol DetailScreenViewModelProtocol: ViewModelProtocol {}
+
+class DetailScreenViewModel: DetailScreenViewModelProtocol {
     
 }

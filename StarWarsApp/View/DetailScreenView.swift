@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct DetailScreenView: ViewProtocol {
-    var vm: ViewModelProtocol
+struct DetailScreenView<Model>: View where Model: DetailScreenViewModelProtocol {
+    @ObservedObject var vm: Model
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

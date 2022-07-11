@@ -14,18 +14,20 @@ class MovieManager: MovieManagerProtocol {
     
     private let session = URLSession.shared
     private lazy var jsonDecoder = JSONDecoder()
-    private let networkManager: NetworkManager
+    private let networkManager: NetworkManagerProtocol
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
     }
     public func getMovieList(completion: @escaping MoviesResultClosure) {
         requestMovieList() { result in
+            print(result)
             switch result {
             case .success(let data):
                 do {
                     let value = try self.jsonDecoder.decode(SearchResult.self, from: data)
-                    completion(.success(value.results))
+                    let list = value.results.sorted(by: {$0.episodeID < $1.episodeID})
+                    completion(.success(list))
                 } catch let error {
                     completion(.failure(error))
                 }
