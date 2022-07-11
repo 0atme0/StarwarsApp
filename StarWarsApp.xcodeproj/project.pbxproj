@@ -24,6 +24,13 @@
 		5049424B287C815C00D87BDC /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049424A287C815C00D87BDC /* JSONNull.swift */; };
 		5049424E287C819800D87BDC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049424D287C819800D87BDC /* NetworkManager.swift */; };
 		50494250287C81AC00D87BDC /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049424F287C81AC00D87BDC /* MovieManager.swift */; };
+		50494253287C81EB00D87BDC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50494252287C81EB00D87BDC /* Constant.swift */; };
+		50494255287C830F00D87BDC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50494254287C830F00D87BDC /* NetworkError.swift */; };
+		50494257287C84EC00D87BDC /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50494256287C84EC00D87BDC /* MovieListRequest.swift */; };
+		50494259287C8F3300D87BDC /* RequestTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50494258287C8F3300D87BDC /* RequestTemplate.swift */; };
+		5049425B287C8F6000D87BDC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049425A287C8F6000D87BDC /* HTTPMethod.swift */; };
+		5049425D287C8FF100D87BDC /* URLRequest+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049425C287C8FF100D87BDC /* URLRequest+init.swift */; };
+		50494260287C92BB00D87BDC /* MovieManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049425F287C92BB00D87BDC /* MovieManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,14 @@
 		5049424A287C815C00D87BDC /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		5049424D287C819800D87BDC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5049424F287C81AC00D87BDC /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		50494252287C81EB00D87BDC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		50494254287C830F00D87BDC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		50494256287C84EC00D87BDC /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
+		50494258287C8F3300D87BDC /* RequestTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTemplate.swift; sourceTree = "<group>"; };
+		5049425A287C8F6000D87BDC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5049425C287C8FF100D87BDC /* URLRequest+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+init.swift"; sourceTree = "<group>"; };
+		5049425F287C92BB00D87BDC /* MovieManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerProtocol.swift; sourceTree = "<group>"; };
+		50494261287C942200D87BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +129,8 @@
 		5049420A287C7E5A00D87BDC /* StarWarsApp */ = {
 			isa = PBXGroup;
 			children = (
+				50494261287C942200D87BDC /* Info.plist */,
+				5049425E287C903F00D87BDC /* Extension */,
 				5049424C287C816200D87BDC /* Helper */,
 				5049423F287C7F4200D87BDC /* Protocols */,
 				5049420B287C7E5A00D87BDC /* StarWarsAppApp.swift */,
@@ -174,6 +191,8 @@
 			children = (
 				5049423B287C7EB000D87BDC /* ViewModelProtocol.swift */,
 				5049423D287C7F1600D87BDC /* ViewProtocol.swift */,
+				50494258287C8F3300D87BDC /* RequestTemplate.swift */,
+				5049425F287C92BB00D87BDC /* MovieManagerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -200,6 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				5049424A287C815C00D87BDC /* JSONNull.swift */,
+				50494252287C81EB00D87BDC /* Constant.swift */,
+				50494254287C830F00D87BDC /* NetworkError.swift */,
+				5049425A287C8F6000D87BDC /* HTTPMethod.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -209,8 +231,17 @@
 			children = (
 				5049424D287C819800D87BDC /* NetworkManager.swift */,
 				5049424F287C81AC00D87BDC /* MovieManager.swift */,
+				50494256287C84EC00D87BDC /* MovieListRequest.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		5049425E287C903F00D87BDC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5049425C287C8FF100D87BDC /* URLRequest+init.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,14 +375,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				50494243287C805D00D87BDC /* DetailScreenViewModel.swift in Sources */,
+				5049425D287C8FF100D87BDC /* URLRequest+init.swift in Sources */,
+				50494255287C830F00D87BDC /* NetworkError.swift in Sources */,
 				50494249287C813C00D87BDC /* SearchResult.swift in Sources */,
 				5049424B287C815C00D87BDC /* JSONNull.swift in Sources */,
 				50494236287C7E7900D87BDC /* MainScreenView.swift in Sources */,
+				50494259287C8F3300D87BDC /* RequestTemplate.swift in Sources */,
 				50494250287C81AC00D87BDC /* MovieManager.swift in Sources */,
+				50494257287C84EC00D87BDC /* MovieListRequest.swift in Sources */,
+				50494260287C92BB00D87BDC /* MovieManagerProtocol.swift in Sources */,
 				5049424E287C819800D87BDC /* NetworkManager.swift in Sources */,
 				50494241287C803000D87BDC /* DetailScreenView.swift in Sources */,
 				5049420C287C7E5A00D87BDC /* StarWarsAppApp.swift in Sources */,
 				5049423C287C7EB000D87BDC /* ViewModelProtocol.swift in Sources */,
+				5049425B287C8F6000D87BDC /* HTTPMethod.swift in Sources */,
+				50494253287C81EB00D87BDC /* Constant.swift in Sources */,
 				50494239287C7E9F00D87BDC /* MainScreenViewModel.swift in Sources */,
 				50494245287C808900D87BDC /* Movie.swift in Sources */,
 				5049423E287C7F1600D87BDC /* ViewProtocol.swift in Sources */,
@@ -516,6 +554,7 @@
 				DEVELOPMENT_TEAM = W7R6ZCLV57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,6 +584,7 @@
 				DEVELOPMENT_TEAM = W7R6ZCLV57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

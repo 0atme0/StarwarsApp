@@ -10,5 +10,5 @@ import Foundation
 struct SearchResult: Codable {
     let count: Int
     let next, previous: JSONNull?
-    let results: [Result]
+    let results: [Movie]
 }
