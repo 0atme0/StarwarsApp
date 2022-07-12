@@ -9,17 +9,23 @@ import SwiftUI
 
 extension MainScreenView {
     var list: some View {
-        ScrollView {
-            ForEach((vm as! MainScreenViewModel).movies, id: \.self) { movie in
-                MainScreenCellView(namespace: namespace, movie: movie)
-                    .onTapGesture {
-                        withAnimation {
-                        vm.selectedMovie = movie
-                        }
+        Group {
+            if vm.isLoading {
+                VStack {
+                    ProgressView()
+                    Spacer()
+                }
+            } else {
+                ScrollView {
+                    ForEach(vm.filteredMovies, id: \.self) { movie in
+                        MainScreenCellView(namespace: namespace, movie: movie)
+                            .onTapGesture {
+                                withAnimation {
+                                    vm.selectedMovie = movie
+                                }
+                            }
                     }
-//                    .sheet(isPresented: $showingDetails) {
-//                        DetailScreenView(vm: DetailScreenViewModel(movie), namespace: namespace)
-//                    }
+                }
             }
         }
     }

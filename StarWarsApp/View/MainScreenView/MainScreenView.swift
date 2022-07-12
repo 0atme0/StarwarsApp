@@ -11,6 +11,7 @@ struct MainScreenView<Model>: View where Model: MainScreenViewModelProtocol {
     
     @ObservedObject var vm: Model
     @Namespace var namespace
+    @State internal var filterExpanded = false
     
     var body: some View {
         ZStack {
@@ -20,6 +21,10 @@ struct MainScreenView<Model>: View where Model: MainScreenViewModelProtocol {
                 if let movie = vm.selectedMovie {
                     DetailScreenView(vm: DetailScreenViewModel($vm.selectedMovie), namespace: namespace)
                 } else {
+                    if let selectedFilter = vm.selectedFilter {
+                        searchBar
+                    }
+                    filterMenu
                     list
                 }
             }
