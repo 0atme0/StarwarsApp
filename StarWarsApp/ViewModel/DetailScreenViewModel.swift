@@ -6,9 +6,22 @@
 //
 
 import Foundation
+import SwiftUI
 
-protocol DetailScreenViewModelProtocol: ViewModelProtocol {}
+protocol DetailScreenViewModelProtocol: ViewModelProtocol {
+    var movie: Movie? {get}
+    func close()
+}
 
 class DetailScreenViewModel: DetailScreenViewModelProtocol {
     
+    @Binding var movie: Movie?
+    
+    init(_ movie: Binding<Movie?>) {
+        self._movie = movie
+    }
+    
+    public func close() {
+        self.movie = nil
+    }
 }
