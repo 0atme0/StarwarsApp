@@ -52,6 +52,8 @@
 		50762CF0287F096C002D7D5A /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049424A287C815C00D87BDC /* JSONNull.swift */; };
 		50762CF2287F0FE5002D7D5A /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50762CF1287F0FE5002D7D5A /* MockNetworkManager.swift */; };
 		50762CF4287F1095002D7D5A /* MockMovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50762CF3287F1095002D7D5A /* MockMovieManager.swift */; };
+		50762CF6287F47BC002D7D5A /* DetailScreenView+StarWarsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50762CF5287F47BC002D7D5A /* DetailScreenView+StarWarsText.swift */; };
+		50762CF8287F484E002D7D5A /* starwars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50762CF7287F484E002D7D5A /* starwars.mp3 */; };
 		50C3B870287DE8ED00009E3B /* DetailScreenView+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B86F287DE8ED00009E3B /* DetailScreenView+Content.swift */; };
 		50C3B872287DE94F00009E3B /* DetailScreenView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B871287DE94F00009E3B /* DetailScreenView+Background.swift */; };
 		50C3B879287DEEDA00009E3B /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B878287DEEDA00009E3B /* FilterType.swift */; };
@@ -124,6 +126,8 @@
 		50762CE8287F08A1002D7D5A /* MainScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelTests.swift; sourceTree = "<group>"; };
 		50762CF1287F0FE5002D7D5A /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		50762CF3287F1095002D7D5A /* MockMovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovieManager.swift; sourceTree = "<group>"; };
+		50762CF5287F47BC002D7D5A /* DetailScreenView+StarWarsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailScreenView+StarWarsText.swift"; sourceTree = "<group>"; };
+		50762CF7287F484E002D7D5A /* starwars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starwars.mp3; sourceTree = "<group>"; };
 		50C3B86F287DE8ED00009E3B /* DetailScreenView+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailScreenView+Content.swift"; sourceTree = "<group>"; };
 		50C3B871287DE94F00009E3B /* DetailScreenView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailScreenView+Background.swift"; sourceTree = "<group>"; };
 		50C3B878287DEEDA00009E3B /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 		5049424C287C816200D87BDC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				50762CF7287F484E002D7D5A /* starwars.mp3 */,
 				5049424A287C815C00D87BDC /* JSONNull.swift */,
 				50494252287C81EB00D87BDC /* Constant.swift */,
 				50494254287C830F00D87BDC /* NetworkError.swift */,
@@ -325,6 +330,7 @@
 				50494240287C803000D87BDC /* DetailScreenView.swift */,
 				50C3B871287DE94F00009E3B /* DetailScreenView+Background.swift */,
 				50C3B86F287DE8ED00009E3B /* DetailScreenView+Content.swift */,
+				50762CF5287F47BC002D7D5A /* DetailScreenView+StarWarsText.swift */,
 			);
 			path = DetailScreenView;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 			files = (
 				50494213287C7E5C00D87BDC /* Preview Assets.xcassets in Resources */,
 				50494210287C7E5C00D87BDC /* Assets.xcassets in Resources */,
+				50762CF8287F484E002D7D5A /* starwars.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				50494259287C8F3300D87BDC /* RequestTemplate.swift in Sources */,
 				50494250287C81AC00D87BDC /* MovieManager.swift in Sources */,
 				50494257287C84EC00D87BDC /* MovieListRequest.swift in Sources */,
+				50762CF6287F47BC002D7D5A /* DetailScreenView+StarWarsText.swift in Sources */,
 				5049426A287D926800D87BDC /* MainScreenView+List.swift in Sources */,
 				50C3B870287DE8ED00009E3B /* DetailScreenView+Content.swift in Sources */,
 				50494268287D924600D87BDC /* MainScreenView+Header.swift in Sources */,

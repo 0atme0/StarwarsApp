@@ -35,21 +35,7 @@ extension DetailScreenView {
                     .matchedGeometryEffect(id: vm.movie?.releaseDate ?? "", in: namespace, properties: .frame)
             }
             Divider()
-            Text("Director: \(vm.movie?.director ?? "")")
-                .foregroundColor(.white)
-                .opacity(0.8)
-                .font(.caption)
-            Text("Producer: \(vm.movie?.producer ?? "")")
-                .foregroundColor(.white)
-                .opacity(0.8)
-                .font(.caption)
-            Divider()
-            Text("\(vm.movie?.openingCrawl ?? "")")
-                .foregroundColor(.white)
-                .opacity(0.8)
-                .font(.caption)
-            
-            Spacer()
+            starwarsText
         }
         .padding()
         .background(Color.white.opacity(0.1))

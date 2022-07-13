@@ -10,4 +10,5 @@ import Foundation
 protocol DetailScreenViewModelProtocol: ViewModelProtocol {
     var movie: Movie? {get}
     func close()
+    func playSound(sound: String, type: String)
 }

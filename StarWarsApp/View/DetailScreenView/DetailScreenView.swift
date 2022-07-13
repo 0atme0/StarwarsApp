@@ -11,7 +11,11 @@ struct DetailScreenView<Model>: View where Model: DetailScreenViewModelProtocol 
     
     @ObservedObject var vm: Model
     var namespace: Namespace.ID
-    
+    @State var starwarsTextStart = false
+    @State var starwarsTextEnd = false
+    internal let startAnimationDuration = 11.0
+    internal let endAnimationDuration = 1.5
+
     var body: some View {
         ZStack {
             background
