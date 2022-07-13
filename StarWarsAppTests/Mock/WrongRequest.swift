@@ -1,15 +1,15 @@
 //
-//  MovieListRequest.swift
-//  StarWarsApp
+//  WrongRequest.swift
+//  StarWarsAppTests
 //
-//  Created by atme on 11/07/2022.
+//  Created by atme on 13/07/2022.
 //
 
 import Foundation
 
-struct MovieListRequest: RequestTemplate {
+struct WrongRequest: RequestTemplate {
     let method: HTTPMethod = .GET
-    let path = "/api/films"
+    var path = "error"
     var parameters: [URLQueryItem] = []
     var headers: [String: String] = [:]
     var body: Data? = nil

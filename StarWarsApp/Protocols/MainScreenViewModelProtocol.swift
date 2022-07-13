@@ -19,4 +19,5 @@ protocol MainScreenViewModelProtocol: ViewModelProtocol {
     
     func selectFilter(_ filter: FilterType)
     func selectMovie(_ movie: Movie)
+    func search(_ searchText: String)
 }

@@ -35,7 +35,6 @@ class MainScreenViewModel: MainScreenViewModelProtocol {
     private func setupBindings() {
         $searchText
             .sink { [weak self] value in
-                print("SEARCH TEXT", value)
                 guard !value.isEmpty else {
                     self?.filteredMovies = self?.movies ?? []
                     return
@@ -90,5 +89,9 @@ class MainScreenViewModel: MainScreenViewModelProtocol {
         withAnimation(.ripple(index: 0)) {
             self.selectedMovie = movie
         }
+    }
+    
+    public func search(_ searchText: String) {
+        self.searchText = searchText
     }
 }

@@ -20,8 +20,7 @@ class MovieManager: MovieManagerProtocol {
         self.networkManager = networkManager
     }
     public func getMovieList(completion: @escaping MoviesResultClosure) {
-        requestMovieList() { result in
-            print(result)
+        requestMovieList { result in
             switch result {
             case .success(let data):
                 do {
