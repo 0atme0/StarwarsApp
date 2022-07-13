@@ -25,6 +25,7 @@ struct MainScreenCellView: View {
                     .foregroundColor(.white)
                     .opacity(0.8)
                     .font(.caption)
+                    .matchedGeometryEffect(id: movie.episodeID, in: namespace, properties: .frame)
             }
             HStack {
                 Spacer()
@@ -35,6 +36,7 @@ struct MainScreenCellView: View {
                     .opacity(0.8)
                     .foregroundColor(.white)
                     .font(.caption)
+                    .matchedGeometryEffect(id: movie.releaseDate, in: namespace, properties: .frame)
             }
         }
         .padding()

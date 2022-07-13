@@ -15,12 +15,13 @@ extension DetailScreenView {
                     .foregroundColor(.white)
                     .bold()
                     .font(.body)
-                    .matchedGeometryEffect(id: vm.movie?.title, in: namespace, properties: .frame)
+                    .matchedGeometryEffect(id: vm.movie?.title ?? "", in: namespace, properties: .frame)
                 Spacer()
                 Text("\(vm.movie?.episodeID ?? 1)")
                     .foregroundColor(.white)
                     .opacity(0.8)
                     .font(.caption)
+                    .matchedGeometryEffect(id: vm.movie?.episodeID ?? 1, in: namespace, properties: .frame)
             }
             HStack {
                 Spacer()
@@ -31,6 +32,7 @@ extension DetailScreenView {
                     .opacity(0.8)
                     .foregroundColor(.white)
                     .font(.caption)
+                    .matchedGeometryEffect(id: vm.movie?.releaseDate ?? "", in: namespace, properties: .frame)
             }
             Divider()
             Text("Director: \(vm.movie?.director ?? "")")

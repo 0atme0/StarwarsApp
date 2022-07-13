@@ -20,9 +20,7 @@ extension MainScreenView {
                     ForEach(vm.filteredMovies, id: \.self) { movie in
                         MainScreenCellView(namespace: namespace, movie: movie)
                             .onTapGesture {
-                                withAnimation {
-                                    vm.selectedMovie = movie
-                                }
+                                vm.selectMovie(movie)
                             }
                     }
                 }

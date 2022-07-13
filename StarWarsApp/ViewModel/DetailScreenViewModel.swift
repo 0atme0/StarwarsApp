@@ -8,11 +8,6 @@
 import Foundation
 import SwiftUI
 
-protocol DetailScreenViewModelProtocol: ViewModelProtocol {
-    var movie: Movie? {get}
-    func close()
-}
-
 class DetailScreenViewModel: DetailScreenViewModelProtocol {
     
     @Binding var movie: Movie?
@@ -22,6 +17,8 @@ class DetailScreenViewModel: DetailScreenViewModelProtocol {
     }
     
     public func close() {
-        self.movie = nil
+        withAnimation(.ripple(index: 0)) {
+            self.movie = nil
+        }
     }
 }

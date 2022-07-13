@@ -18,7 +18,7 @@ struct MainScreenView<Model>: View where Model: MainScreenViewModelProtocol {
             background
             VStack(alignment: .center) {
                 header
-                if let movie = vm.selectedMovie {
+                if let _ = vm.selectedMovie {
                     DetailScreenView(vm: DetailScreenViewModel($vm.selectedMovie), namespace: namespace)
                 } else {
                     if let selectedFilter = vm.selectedFilter {

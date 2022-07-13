@@ -7,19 +7,7 @@
 
 import Foundation
 import Combine
-
-protocol MainScreenViewModelProtocol: ViewModelProtocol {
-    var movies: [Movie] {get}
-    var filteredMovies: [Movie] {get}
-    var isLoading: Bool {get}
-    var isError: String? {get}
-    var selectedMovie: Movie? {get set}
-    var selectedFilter: FilterType? {get}
-    var filterList: [FilterType] {get}
-    var searchText: String {get set}
-    
-    func selectFilter(_ filter: FilterType)
-}
+import SwiftUI
 
 class MainScreenViewModel: MainScreenViewModelProtocol {
     
@@ -96,5 +84,11 @@ class MainScreenViewModel: MainScreenViewModelProtocol {
     public func selectFilter(_ filter: FilterType) {
         self.searchText = ""
         self.selectedFilter = filter
+    }
+    
+    public func selectMovie(_ movie: Movie) {
+        withAnimation(.ripple(index: 0)) {
+            self.selectedMovie = movie
+        }
     }
 }

@@ -15,8 +15,7 @@ struct DetailScreenView<Model>: View where Model: DetailScreenViewModelProtocol 
     var body: some View {
         ZStack {
             background
-                .animation(.linear, value: namespace)
-                .matchedGeometryEffect(id: vm.movie?.id, in: namespace, properties: .frame)
+                .matchedGeometryEffect(id: vm.movie?.id ?? UUID(), in: namespace, properties: .frame)
             VStack {
                 content
                     .background(Color.white.opacity(0.1))

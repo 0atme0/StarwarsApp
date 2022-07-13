@@ -40,6 +40,9 @@
 		50C3B879287DEEDA00009E3B /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B878287DEEDA00009E3B /* FilterType.swift */; };
 		50C3B87C287DF89300009E3B /* MainScreenView+FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B87B287DF89300009E3B /* MainScreenView+FilterMenu.swift */; };
 		50C3B87E287DF8B900009E3B /* MainScreenView+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B87D287DF8B900009E3B /* MainScreenView+SearchBar.swift */; };
+		50C3B880287EF23700009E3B /* Animation+Ripple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B87F287EF23700009E3B /* Animation+Ripple.swift */; };
+		50C3B882287EF2FA00009E3B /* MainScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B881287EF2FA00009E3B /* MainScreenViewModelProtocol.swift */; };
+		50C3B884287EF31500009E3B /* DetailScreenViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3B883287EF31500009E3B /* DetailScreenViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		50C3B878287DEEDA00009E3B /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 		50C3B87B287DF89300009E3B /* MainScreenView+FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+FilterMenu.swift"; sourceTree = "<group>"; };
 		50C3B87D287DF8B900009E3B /* MainScreenView+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+SearchBar.swift"; sourceTree = "<group>"; };
+		50C3B87F287EF23700009E3B /* Animation+Ripple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Ripple.swift"; sourceTree = "<group>"; };
+		50C3B881287EF2FA00009E3B /* MainScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelProtocol.swift; sourceTree = "<group>"; };
+		50C3B883287EF31500009E3B /* DetailScreenViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,8 @@
 				50494258287C8F3300D87BDC /* RequestTemplate.swift */,
 				5049425F287C92BB00D87BDC /* MovieManagerProtocol.swift */,
 				50494262287C969500D87BDC /* NetworkManagerProtocol.swift */,
+				50C3B881287EF2FA00009E3B /* MainScreenViewModelProtocol.swift */,
+				50C3B883287EF31500009E3B /* DetailScreenViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				5049425C287C8FF100D87BDC /* URLRequest+init.swift */,
+				50C3B87F287EF23700009E3B /* Animation+Ripple.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				50494243287C805D00D87BDC /* DetailScreenViewModel.swift in Sources */,
 				5049425D287C8FF100D87BDC /* URLRequest+init.swift in Sources */,
 				50494255287C830F00D87BDC /* NetworkError.swift in Sources */,
+				50C3B882287EF2FA00009E3B /* MainScreenViewModelProtocol.swift in Sources */,
 				50494249287C813C00D87BDC /* SearchResult.swift in Sources */,
 				5049424B287C815C00D87BDC /* JSONNull.swift in Sources */,
 				50494236287C7E7900D87BDC /* MainScreenView.swift in Sources */,
@@ -446,6 +456,8 @@
 				5049426C287D940400D87BDC /* MainScreenCellView.swift in Sources */,
 				50C3B872287DE94F00009E3B /* DetailScreenView+Background.swift in Sources */,
 				50C3B87C287DF89300009E3B /* MainScreenView+FilterMenu.swift in Sources */,
+				50C3B884287EF31500009E3B /* DetailScreenViewModelProtocol.swift in Sources */,
+				50C3B880287EF23700009E3B /* Animation+Ripple.swift in Sources */,
 				50494266287D922400D87BDC /* MainScreenView+Background.swift in Sources */,
 				5049423C287C7EB000D87BDC /* ViewModelProtocol.swift in Sources */,
 				5049425B287C8F6000D87BDC /* HTTPMethod.swift in Sources */,
